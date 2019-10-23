@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/web/common-webview/common-webview"
+  ],
+  "subPackages": [],
+  "window": {
+    "defaultTitle": "砂石",
+    "titleBarColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "usingComponents": {}
+}
