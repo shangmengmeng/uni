@@ -167,6 +167,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _baseApi = _interopRequireDefault(__webpack_require__(/*! ../../api/baseApi.js */ 15));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
 //
 //
@@ -200,20 +222,32 @@ var _baseApi = _interopRequireDefault(__webpack_require__(/*! ../../api/baseApi.
 //
 //
 //
-var _default = { data: function data() {return { currentCity: '', board_model: [{ imgSrc: '../../static/icon_1.png', name: '资讯' }, { imgSrc: '../../static/icon_2.png', name: '集采' }, { imgSrc: '../../static/icon_3.png', name: '设备' }, { imgSrc: '../../static/icon_4.png', name: '供需' }, { imgSrc: '../../static/icon_5.png', name: '价格' }], indicatorDots: true, autoplay: true, interval: 2000, duration: 500, "banner_index": [{ "img": "", "type": "", "param": "" }] };}, onLoad: function onLoad() {
-    var _self = this;
-    var params = '';
-    //uni获取经纬度
-    uni.getLocation({
-      //type: 'wgs84',
-      success: function success(res) {
-        params = res;
-        // 高德地图web逆向编码获取定位
-        uni.request({
-          url: 'https://restapi.amap.com/v3/geocode/regeo?key=5950e290e01ff9b7c43ec0508f5afe72&location=' + params.longitude +
-          ',' +
-          params.latitude,
-          success: function success(res) {
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { currentCity: '', board_model: [{ imgSrc: '../../static/icon_1.png', name: '资讯' }, { imgSrc: '../../static/icon_2.png', name: '集采' }, { imgSrc: '../../static/icon_3.png', name: '设备' }, { imgSrc: '../../static/icon_4.png', name: '供需' }, { imgSrc: '../../static/icon_5.png', name: '价格' }], indicatorDots: true, autoplay: true, interval: 2000, duration: 500, banner_index: [{ img: '', type: '', param: '' }], agshop_wharf: [{ id: '', type: 1, name: '', imgs: '', d_depth: '', b_tonnage: '', localtion: '', address: '', server_shipping: 2, server_towharf: '', server_loading: '', server_range: '', server_lgtype: '', intro: '', state: 2, created_at: '', updated_at: '', imgsarr: ['', ''] }] };}, onLoad: function onLoad() {var _self = this;var params = ''; //uni获取经纬度
+    uni.getLocation({ //type: 'wgs84',
+      success: function success(res) {params = res; // 高德地图web逆向编码获取定位
+        uni.request({ url: 'https://restapi.amap.com/v3/geocode/regeo?key=5950e290e01ff9b7c43ec0508f5afe72&location=' + params.longitude + ',' + params.latitude, success: function success(res) {
             _self.currentCity = res.data.regeocode.addressComponent.city;
           } });
 
@@ -223,12 +257,12 @@ var _default = { data: function data() {return { currentCity: '', board_model: [
       url: _baseApi.default.HOME_INDEX,
       success: function success(res) {
         _self.banner_index = res.data.data.banner_index;
+        _self.agshop_wharf = res.data.data.agshop_wharf;
       } });
 
   },
   methods: {
     onItemClick: function onItemClick(options) {
-
       switch (options.type) {
         case 'report': //跳转到数据模块
           break;
@@ -244,7 +278,6 @@ var _default = { data: function data() {return { currentCity: '', board_model: [
         default:
           break;}
 
-
     },
     onCityClick: function onCityClick() {
       uni.showToast({
@@ -257,6 +290,11 @@ var _default = { data: function data() {return { currentCity: '', board_model: [
 
     },
     onBoardItemClick: function onBoardItemClick(options) {
+      uni.showToast({
+        title: options });
+
+    },
+    onPortItemClick: function onPortItemClick(options) {
       uni.showToast({
         title: options });
 

@@ -10,6 +10,10 @@
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 	width: 100%;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 /* 搜索栏 */
@@ -49,7 +53,6 @@
 	        justify-content: flex-start;
 	width: 70px;
 	height: 50px;
-	margin-left: 15px;
 }
 .search_button_img {
 	width: 10px;
@@ -58,10 +61,10 @@
 }
 .search_button_lab {
 	font-size: 12px;
-	color: #007AFF;
+	color: #007aff;
 	padding-left: 15rpx;
 }
-.search_button_view{
+.search_button_view {
 	margin-left: 30rpx;
 	border-radius: 50rpx;
 	baseline-shift: baseline;
@@ -87,13 +90,9 @@
 	background: #f1f5f8;
 }
 .container_swiper {
-	
 	display: -webkit-box;
-	
 	display: -webkit-flex;
-	
 	display: -ms-flexbox;
-	
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
@@ -106,18 +105,26 @@
 	border-radius: 15rpx;
 	width: 100%;
 	height: 160px;
-	margin: 0rpx 0rpx 0rpx 30rpx;
 }
 .swiper-style-item {
-
 	-webkit-box-pack: center;
-
 	-webkit-justify-content: center;
-
 	    -ms-flex-pack: center;
-
 	        justify-content: center;
 	width: 100%;
 	height: 160px;
+}
+.port {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	width: 100%;
+	height: 280rpx;
 }
 
