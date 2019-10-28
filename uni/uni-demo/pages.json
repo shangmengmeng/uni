@@ -10,11 +10,35 @@
             "path" : "pages/web/common-webview/common-webview",
             "style" : {}
         }
+        ,{
+            "path" : "pages/shop/shop",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "砂石",
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#FFFFFF"
-	}
+	},
+	"tabBar":{
+			"color":"#bfbfbf",
+			"selectedColor":"#007AFF",
+			"borderStyle":"black",
+			"backgroundColor":"#F1F1F1",
+			"list":[
+				{
+					"pagePath":"pages/index/index",
+					"text":"首页",
+					"iconPath":"static/icon_1.png",
+					"selectedIconPath":"static/icon_2.png"
+				},
+				{
+					"pagePath":"pages/shop/shop",
+					"text":"第二页",
+					"iconPath":"static/icon_1.png",
+					"selectedIconPath":"static/icon_2.png"
+				}
+			]
+		}
 }
